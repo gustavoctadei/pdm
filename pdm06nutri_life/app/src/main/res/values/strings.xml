@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NutriLife</string>
+    <string name="titulo">Calculadora IMC</string>
+    <string name="text_nome">Nome:</string>
+    <string name="text_peso">Peso:</string>
+    <string name="text_altura">Altura:</string>
+    <string name="text_sexo">Sexo:</string>
+    <string name="text_masculino">Masculino</string>
+    <string name="text_feminino">Feminino</string>
+    <string name="botao_calcular">Calcular</string>
+
+    <string name="titulo_resultado">Resultado</string>
+    <string name="text_resultado_titulo_riscos">Abaixo estão os riscos associados ao seu resultado:</string>
+    <string name="botao_voltar">Voltar</string>
+</resources>
