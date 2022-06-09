@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/boxLeite"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="251dp"
+        android:text="@string/produtoLeite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boxPao" />
+
+    <CheckBox
+        android:id="@+id/boxOvos"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/produtoOvos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boxLeite" />
+
+    <CheckBox
+        android:id="@+id/boxCarne"
+        android:layout_width="176dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/produtoCarne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boxArroz" />
+
+    <CheckBox
+        android:id="@+id/boxPao"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/produtoPao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boxCarne" />
+
+    <TextView
+        android:id="@+id/textoEscolhaProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/comic_neue_light"
+        android:text="@string/textoEscolhaProduto"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/boxArroz"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="252dp"
+        android:text="@string/produtoArroz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoEscolhaProduto" />
+
+    <Button
+        android:id="@+id/botaoTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/botaoTotal"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boxOvos" />
+
+    <TextView
+        android:id="@+id/textoValor"
+        android:layout_width="224dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="184dp"
+        android:fontFamily="@font/comic_neue_light"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/botaoTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toEndOf="@+id/botaoTotal" />
+
+    <TextView
+        android:id="@+id/textoDesconto"
+        android:layout_width="146dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="286dp"
+        android:fontFamily="@font/comic_neue_light"
+        android:text="@string/textoDesconto"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoTotal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupDesconto"
+        android:layout_width="0dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoDesconto">
+
+        <RadioButton
+            android:id="@+id/radioSemDesconto"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:text="@string/semDesconto" />
+
+        <RadioButton
+            android:id="@+id/radioDescontoCinco"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:text="@string/descontoCinco" />
+
+        <RadioButton
+            android:id="@+id/radioDescontoDez"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="@string/descontoDez" />
+
+        <RadioButton
+            android:id="@+id/radioDescontoQuinze"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="@string/descontoQuinze" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textoValorPago"
+        android:layout_width="182dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="247dp"
+        android:fontFamily="@font/comic_neue_light"
+        android:text="@string/valorPago"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupDesconto" />
+
+    <EditText
+        android:id="@+id/editTextValorPago"
+        android:layout_width="238dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="181dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoValorPago" />
+
+    <Button
+        android:id="@+id/botaoEfetuarPagamento"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/botaoEfetuarPagamento"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextValorPago" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
