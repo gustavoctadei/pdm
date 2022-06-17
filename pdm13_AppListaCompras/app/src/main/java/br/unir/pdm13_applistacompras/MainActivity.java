@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void actionButtonVisualizarMain() {
+        listaCompras = sharedPreferencesUtil.getListaCompras();
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
         alertDialog.setTitle("Lista de Compras");
         alertDialog.setNeutralButton("Ok", null);

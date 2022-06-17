@@ -8,9 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,13 +22,13 @@ import java.util.List;
 
 public class Mercado extends AppCompatActivity {
 
-    private RecyclerView recyclerViewMercado;
-
     private SharedPreferencesUtil sharedPreferencesUtil;
     private List<Produto> listaCompras;
     private List<Produto> carrinho;
     private FloatingActionButton buttonFinalizarMercado;
     private Float totalPrevisto;
+
+    private ListView listViewMercado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,37 +38,35 @@ public class Mercado extends AppCompatActivity {
         carrinho = new ArrayList<Produto>();
 
         buttonFinalizarMercado = findViewById(R.id.buttonFinalizarMercado);
+        listViewMercado = findViewById(R.id.listViewMercado);
 
         sharedPreferencesUtil = new SharedPreferencesUtil(getApplicationContext());
         listaCompras = sharedPreferencesUtil.getListaCompras();
         totalPrevisto = calculaTotalPrevisto();
 
-        ProdutoAdapter produtoAdapter = new ProdutoAdapter(listaCompras);
+        ArrayAdapter<Produto> arrayAdapter = new ArrayAdapter<Produto>(this, android.R.layout.simple_list_item_1, listaCompras);
+        listViewMercado.setAdapter(arrayAdapter);
 
-        recyclerViewMercado = findViewById(R.id.recyclerViewMercado);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Mercado.this);
-        recyclerViewMercado.setLayoutManager(layoutManager);
-        recyclerViewMercado.setHasFixedSize(true);
-        recyclerViewMercado.addItemDecoration( new DividerItemDecoration( Mercado.this, LinearLayout.VERTICAL) );
-        recyclerViewMercado.setAdapter(produtoAdapter);
+        listViewMercado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+                compraProduto(listaCompras.get(position));
+            }
+        });
 
-        recyclerViewMercado.addOnItemTouchListener(new RecyclerItemClickListener(Mercado.this, recyclerViewMercado,
-                new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        listViewMercado.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int arg2, long arg3) {
+                listaCompras.remove(arg2);
+                arrayAdapter.notifyDataSetChanged();
 
-                    }
+                sharedPreferencesUtil.salvarListaCompras(listaCompras);
 
-                    @Override
-                    public void onItemClick(View view, int position) {
-                        compraProduto(listaCompras.get(position));
-                    }
+                Toast.makeText(getApplicationContext(), "O produto foi removido da lista de compras.", Toast.LENGTH_LONG).show();
+                return false;
+            }
+        });
 
-                    @Override
-                    public void onLongItemClick(View view, int position) {
-
-                    }
-                }));
 
         buttonFinalizarMercado.setOnClickListener(new View.OnClickListener() {
             @Override
