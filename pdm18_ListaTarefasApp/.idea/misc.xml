@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Gustavo/Projects/pdm/pdm18_ListaTarefasApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Gustavo/Projects/pdm/pdm18_ListaTarefasApp/app/src/main/res/layout/activity_tarefa.xml" value="0.25" />
+        <entry key="..\:/Users/Gustavo/Projects/pdm/pdm18_ListaTarefasApp/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/Users/Gustavo/Projects/pdm/pdm18_ListaTarefasApp/app/src/main/res/layout/lista_tarefa_adapter.xml" value="0.25" />
+        <entry key="..\:/Users/Gustavo/Projects/pdm/pdm18_ListaTarefasApp/app/src/main/res/menu/menu_adicionar_tarefa.xml" value="0.25" />
         <entry key="..\:/Users/Gustavo/Projects/pdm/pdm_18_ListaTarefasApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Gustavo/Projects/pdm/pdm_18_ListaTarefasApp/app/src/main/res/layout/activity_tarefa.xml" value="0.25" />
         <entry key="..\:/Users/Gustavo/Projects/pdm/pdm_18_ListaTarefasApp/app/src/main/res/layout/content_main.xml" value="0.25" />
