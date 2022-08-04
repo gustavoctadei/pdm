@@ -45,11 +45,11 @@ public class Bicicleta {
     }
 
     public String getPrecoDinheiroFormatado() {
-        return "R$: " + String.format("%.2f", this.getPrecoDinheiro());
+        return "Preço no Dinheiro: R$" + String.format("%.2f", this.getPrecoDinheiro());
     }
 
     public String getPrecoCartaoFormatado() {
-        return "R$: " + String.format("%.2f", this.getPrecoCartao());
+        return "Preço no Cartão: R$" + String.format("%.2f", this.getPrecoCartao());
     }
 
 }

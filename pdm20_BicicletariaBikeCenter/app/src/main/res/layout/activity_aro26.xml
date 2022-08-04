@@ -4,90 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Aro12Activity">
-
-    <ImageButton
-        android:id="@+id/imageButtonB1"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAro12"
-        app:srcCompat="@drawable/b1" />
-
-    <ImageButton
-        android:id="@+id/imageButtonB5"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonB3"
-        app:srcCompat="@drawable/b5" />
-
-    <ImageButton
-        android:id="@+id/imageButtonB3"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonB1"
-        app:srcCompat="@drawable/b3" />
-
-    <ImageButton
-        android:id="@+id/imageButtonB6"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonB4"
-        app:srcCompat="@drawable/b6" />
-
-    <ImageButton
-        android:id="@+id/imageButtonB4"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonB2"
-        app:srcCompat="@drawable/b4" />
-
-    <ImageButton
-        android:id="@+id/imageButtonB2"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAro12"
-        app:srcCompat="@drawable/b2" />
+    tools:context=".Aro26Activity">
 
     <TextView
-        android:id="@+id/textViewAro12"
+        android:id="@+id/textViewAro26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="114dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="114dp"
-        android:text="Bicicletas Aro 12"
+        android:text="Bicicletas Aro 26"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/imageButtonB23"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAro26"
+        app:srcCompat="@drawable/b23" />
+
+    <ImageButton
+        android:id="@+id/imageButtonB24"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAro26"
+        app:srcCompat="@drawable/b24" />
+
+    <ImageButton
+        android:id="@+id/imageButtonB25"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonB23"
+        app:srcCompat="@drawable/b25" />
+
+    <ImageButton
+        android:id="@+id/imageButtonB26"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonB24"
+        app:srcCompat="@drawable/b26" />
+
+    <ImageButton
+        android:id="@+id/imageButtonB27"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonB25"
+        app:srcCompat="@drawable/b27" />
+
+    <ImageButton
+        android:id="@+id/imageButtonB28"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonB26"
+        app:srcCompat="@drawable/b28" />
+
     <Button
-        android:id="@+id/buttonInicioAro12"
+        android:id="@+id/buttonInicioAro26"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -96,6 +96,6 @@
         android:text="Início"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonB6" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonB27" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

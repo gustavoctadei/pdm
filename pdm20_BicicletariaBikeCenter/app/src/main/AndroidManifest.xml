@@ -14,10 +14,28 @@
         android:theme="@style/Theme.BicicletariaBikeCenter"
         tools:targetApi="31">
         <activity
-            android:name=".aro12"
+            android:name=".Aro29Activity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".Aro26Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Aro24Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Aro20Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Aro16Activity"
+            android:exported="false" />
+        <activity
+            android:name=".VisualizarBicicletaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Aro12Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

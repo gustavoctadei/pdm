@@ -63,7 +63,7 @@ public class BicicletaDao {
         return bicicletas;
     }
 
-    private void inserirBicicletas() {
+    public void inserirBicicletas() {
         Bicicleta b = new Bicicleta();
         b.setId(1);
         b.setDescricao("Bicicleta aro 12\n" +

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -50,8 +50,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="376dp"
-        android:layout_height="181dp"
+        android:layout_width="377dp"
+        android:layout_height="179dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
