@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.bicicletariabikecenter.R;
 import com.example.bicicletariabikecenter.dao.BicicletaDao;
 import com.example.bicicletariabikecenter.model.Bicicleta;
+import com.example.bicicletariabikecenter.util.SharedPreferencesUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +29,24 @@ public class VisualizarBicicletaActivity extends AppCompatActivity {
         Integer idBicicleta = intent.getIntExtra("id", 0);
         this.carregaImagem(idBicicleta);
         this.carregaDadosBicicleta(idBicicleta);
+
+        SharedPreferencesUtil sharedPreferencesUtil = new SharedPreferencesUtil(getApplicationContext());
+
+        Switch switchFavorito = findViewById(R.id.switchFavorito);
+        switchFavorito.setChecked( this.isFavorito(idBicicleta) );
+        switchFavorito.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+                if (checked) {
+                    sharedPreferencesUtil.adicionarFavorito(idBicicleta);
+                    Toast.makeText(getApplicationContext(), "Salvo nos favoritos.", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    sharedPreferencesUtil.removerFavorito(idBicicleta);
+                    Toast.makeText(getApplicationContext(), "Removido dos favoritos.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void carregaDadosBicicleta(Integer id) {
@@ -47,6 +69,13 @@ public class VisualizarBicicletaActivity extends AppCompatActivity {
                 return;
             }
         }
+    }
+
+    private Boolean isFavorito(Integer idBicicleta) {
+        SharedPreferencesUtil sharedPreferencesUtil = new SharedPreferencesUtil(getApplicationContext());
+        List<Integer> listaFavoritos = sharedPreferencesUtil.getFavoritos();
+
+        return listaFavoritos.contains(idBicicleta);
     }
 
     private void carregaImagem(Integer id) {

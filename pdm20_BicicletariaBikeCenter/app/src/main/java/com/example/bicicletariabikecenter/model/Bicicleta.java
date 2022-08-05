@@ -52,4 +52,8 @@ public class Bicicleta {
         return "Preço no Cartão: R$" + String.format("%.2f", this.getPrecoCartao());
     }
 
+    @Override
+    public String toString() {
+        return this.getDescricao();
+    }
 }

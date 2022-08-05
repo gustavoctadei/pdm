@@ -14,6 +14,9 @@
         android:theme="@style/Theme.BicicletariaBikeCenter"
         tools:targetApi="31">
         <activity
+            android:name=".FavoritosActivity"
+            android:exported="false" />
+        <activity
             android:name=".Aro29Activity"
             android:exported="false" />
         <activity

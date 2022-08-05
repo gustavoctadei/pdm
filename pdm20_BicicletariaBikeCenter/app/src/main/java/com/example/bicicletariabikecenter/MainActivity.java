@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.bicicletariabikecenter.dao.BicicletaDao;
@@ -79,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Aro29Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonFavoritos = findViewById(R.id.buttonFavoritos);
+        buttonFavoritos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FavoritosActivity.class);
                 startActivity(intent);
             }
         });
