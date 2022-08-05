@@ -1,5 +1,5 @@
 # Projeto Final da disciplina de Programação para Dispositivos Móveis
 
 # Integrantes
-* André FelipeCosta da Silva
-* Gustavo Tadei
+* André Felie Costa da Silva
+* Gustavo Cavalcante Tadei
